@@ -1,0 +1,6 @@
+Exploration fast run complete in 408.81 seconds.
+Top validation-score strategy: EXTREME_TREND_FOLLOWING (extreme_trend_following_003).
+Top validation-score test PnL: -1138.0 points; Sharpe: -1.329; trades: 32; trades/day: 0.299.
+Best benchmark-beating validation-screened candidate: LONG_OR_FLAT_FILTERED (long_or_flat_filtered_004).
+LONG_OR_FLAT_FILTERED test PnL: 991.0 points; Sharpe: 0.911; trades: 68; trades/day: 0.636.
+Beats HYBRID: True; beats ORB: True; beats INTRADAY_LONG: True; beats FLAT: True.

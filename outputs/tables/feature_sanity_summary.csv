@@ -1,0 +1,17 @@
+metric,value
+sample_session_date,20170703
+sample_session_rows,376
+OR_high,25699.0
+OR_low,25506.0
+first_vwap_values,25524.0; 25537.6981; 25541.939; 25546.2155; 25547.9493
+z_score_nonzero_count,308
+z_score_min,-0.7489785819580612
+z_score_max,8.593065180591044
+ER_max,0.34054054054054056
+RV_max,0.0043916069184997235
+extreme_vol_threshold,0.004687504506028113
+regime_EXTREME_count,0
+regime_RANGE_count,376
+regime_TREND_count,0
+orb_test_signal,1
+mr_test_signal,-1

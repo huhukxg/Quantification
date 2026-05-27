@@ -1,0 +1,4 @@
+selection,buffer_points,er_threshold,er_window,extreme_action,extreme_vol_quantile,forced_exit_time,max_daily_loss,max_trades,min_std_threshold,opening_window,rolling_window,rv_window,stop_loss_points,take_profit_points,use_vwap,z_entry,z_exit,extreme_vol_threshold
+ORB,20,0.35,60,close,0.9,162800,200,2,5,30,60,60,120,180,True,2.0,0.25,
+MR,10,0.35,60,close,0.9,162800,200,3,5,30,120,60,80,120,True,2.5,0.25,
+HYBRID,10,0.35,60,close,0.95,162800,200,3,5,30,120,60,80,120,True,2.5,0.25,0.00545138283487605

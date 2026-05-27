@@ -1,0 +1,2 @@
+variant,params_id,buffer_points,close_on_extreme,disable_take_profit,er_threshold,er_window,extreme_action,extreme_vol_quantile,extreme_vol_threshold,forced_exit_time,hold_to_close,max_daily_loss,max_trades,min_er,min_opening_return_points,min_std_threshold,opening_window,rolling_window,rv_window,stop_loss_points,take_profit_points,use_vwap,z_entry,z_exit
+LONG_OR_FLAT_FILTERED,long_or_flat_filtered_004,10,False,True,0.35,60,close,0.95,0.005451382834876,162800,True,200,1,0.25,20,5,30,120,60,160,9999,True,2.5,0.25

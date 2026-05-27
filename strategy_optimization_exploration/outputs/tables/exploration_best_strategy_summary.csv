@@ -1,0 +1,3 @@
+selection_basis,strategy,variant,params_id,validation_rank,validation_score,validation_pnl_points,validation_sharpe,test_pnl_points,test_sharpe,test_num_trades,test_trades_per_day,beats_intraday_long,beats_flat
+top_validation_score,EXTREME_TREND_FOLLOWING,EXTREME_TREND_FOLLOWING,extreme_trend_following_003,1,2.6420735508869897,1115.0,2.1389216033456733,-1138.0,-1.3290433020792634,32,0.2990654205607476,False,False
+best_test_among_validation_screened_candidates,LONG_OR_FLAT_FILTERED,LONG_OR_FLAT_FILTERED,long_or_flat_filtered_004,3,1.3745152605619415,1078.0,1.3418420032376526,991.0,0.9110407942402244,68,0.6355140186915887,True,True

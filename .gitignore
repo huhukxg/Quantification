@@ -1,0 +1,45 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments and local Python tooling
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# IDE / editor files
+.idea/
+.vscode/
+.claude/
+*.swp
+*.swo
+*~
+
+# macOS / system files
+.DS_Store
+._*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Raw data and course PDFs
+
+*.pdf
+!project requirements_2026.pdf
+
+# LaTeX working directory
+latex/
+
+
+# vibe coding过程性记录文件
+PROGRESS.md
+RUN_LOG.md
+TODO.md

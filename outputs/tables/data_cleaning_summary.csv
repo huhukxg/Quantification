@@ -1,0 +1,10 @@
+metric,value
+rows_before_cleaning,582100
+rows_after_duplicate_removal,577600
+duplicate_count_removed,4500
+rows_after_day_session_filter,270511
+rows_after_cleaning,269150
+sessions_before_validation,724
+sessions_after_validation,716
+dropped_short_sessions,8
+zero_volume_count,0

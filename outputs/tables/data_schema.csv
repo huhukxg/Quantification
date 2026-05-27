@@ -1,0 +1,10 @@
+column,dtype,non_null_count
+date,int64,269150
+time,int64,269150
+open,float64,269150
+high,float64,269150
+low,float64,269150
+close,float64,269150
+volume,float64,269150
+datetime,datetime64[ns],269150
+is_illiquid,bool,269150
