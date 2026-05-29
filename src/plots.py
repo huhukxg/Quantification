@@ -111,6 +111,39 @@ def plot_param_heatmap(
     _save(fig, filepath)
 
 
+def plot_validation_candidate_bars(results: pd.DataFrame, filepath: str | Path) -> None:
+    """Plot top validation candidates by Sharpe with key parameter labels."""
+    fig, ax = plt.subplots(figsize=(8.5, 4.8))
+    required = {"validation_rank", "sharpe_ratio", "stop_loss_points", "take_profit_points", "max_trades"}
+    if results.empty or not required.issubset(results.columns):
+        ax.text(0.5, 0.5, "No validation candidate data", ha="center", va="center")
+        ax.set_axis_off()
+    else:
+        top = results.sort_values("validation_rank").head(5).copy()
+        labels = [
+            f"#{int(row.validation_rank)}\nSL {int(row.stop_loss_points)} / TP {int(row.take_profit_points)}\nmax {int(row.max_trades)}"
+            for row in top.itertuples()
+        ]
+        values = top["sharpe_ratio"].astype(float).to_numpy()
+        bars = ax.bar(labels, values, color="#4C78A8", edgecolor="#26394f", linewidth=0.8)
+        ax.axhline(0, color="black", linewidth=0.8)
+        ax.set(
+            title="Top ORB validation candidates by Sharpe",
+            xlabel="Validation rank and key risk parameters",
+            ylabel="Validation Sharpe",
+        )
+        ax.set_ylim(0, max(values) * 1.22)
+        for bar, value in zip(bars, values):
+            ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height(), f"{value:.3f}", ha="center", va="bottom")
+        if {"opening_window", "buffer_points"}.issubset(top.columns):
+            openings = sorted(top["opening_window"].dropna().unique())
+            buffers = sorted(top["buffer_points"].dropna().unique())
+            if len(openings) == 1 and len(buffers) == 1:
+                note = f"All top-five candidates use opening window {int(openings[0])} and buffer {int(buffers[0])}."
+                ax.text(0.5, -0.28, note, ha="center", va="top", transform=ax.transAxes, fontsize=9)
+    _save(fig, filepath)
+
+
 def plot_slippage_sensitivity(sensitivity: pd.DataFrame, filepath: str | Path) -> None:
     """Plot HYBRID PnL under slippage assumptions."""
     fig, ax = plt.subplots(figsize=(7, 4))

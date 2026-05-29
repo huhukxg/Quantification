@@ -333,7 +333,7 @@ def plot_monthly_heatmap(monthly: pd.DataFrame, filepath: Path) -> None:
     image = ax.imshow(pivot.to_numpy(dtype=float), aspect="auto", cmap="RdYlGn")
     ax.set_xticks(range(len(pivot.columns)), [str(value) for value in pivot.columns])
     ax.set_yticks(range(len(pivot.index)), [str(value) for value in pivot.index])
-    ax.set(title="Long-or-Flat Monthly PnL", xlabel="Month", ylabel="Year")
+    ax.set(title="Long-or-Flat full-sample monthly PnL heatmap", xlabel="Month", ylabel="Year")
     fig.colorbar(image, ax=ax, shrink=0.85)
     save_fig(fig, filepath)
 
@@ -431,4 +431,3 @@ def save_fig(fig: plt.Figure, filepath: Path) -> None:
 
 if __name__ == "__main__":
     main()
-

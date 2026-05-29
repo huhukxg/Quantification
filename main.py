@@ -33,6 +33,7 @@ from src.plots import (
     plot_sharpe_vs_slippage,
     plot_slippage_sensitivity,
     plot_trade_distribution,
+    plot_validation_candidate_bars,
 )
 from src.preprocessing import get_sessions, preprocess_data, split_by_period
 from src.regime import classify_regime_series, compute_extreme_vol_threshold
@@ -690,7 +691,7 @@ def run_pipeline(mode: str) -> None:
     plot_cumulative_pnl(test_curves, figure_dir / "out_of_sample_cumulative_pnl.png", "Out-of-Sample Cumulative PnL")
     plot_drawdown(results_by_split["test"]["HYBRID"].equity_curve, figure_dir / "hybrid_drawdown.png")
     plot_trade_distribution(test_hybrid_trades, figure_dir / "hybrid_trade_distribution.png")
-    plot_param_heatmap(optimization["orb_train_grid"], "opening_window", "buffer_points", figure_dir / "orb_param_heatmap.png")
+    plot_validation_candidate_bars(optimization["orb_validation_top5"], figure_dir / "orb_param_heatmap.png")
     plot_param_heatmap(optimization["mr_train_grid"], "rolling_window", "z_entry", figure_dir / "mr_param_heatmap.png")
     plot_param_heatmap(optimization["regime_train_grid"], "er_threshold", "rv_window", figure_dir / "regime_param_heatmap.png")
     plot_slippage_sensitivity(slippage_sensitivity, figure_dir / "slippage_sensitivity.png")

@@ -37,9 +37,13 @@ ENV/
 
 # LaTeX working directory
 latex/
+8020_report (30.5.2026)/
+report/
 
 
 # vibe coding过程性记录文件
 PROGRESS.md
 RUN_LOG.md
 TODO.md
+
+guide.md
