@@ -33,7 +33,9 @@ ENV/
 # Raw data and course PDFs
 
 *.pdf
-!project requirements_2026.pdf
+PROJECT_PROPOSAL_v2.md
+PROJECT_STATE.json
+project requirements_2026.pdf
 
 # LaTeX working directory
 latex/
@@ -41,7 +43,6 @@ latex/
 report/
 
 
-# vibe coding过程性记录文件
 PROGRESS.md
 RUN_LOG.md
 TODO.md
